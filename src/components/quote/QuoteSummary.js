@@ -9,13 +9,13 @@ const QuoteSummary = () => {
   const [summaryOrder, setSummaryOrder] = useState();
 
   useEffect(() => {
+    console.log(quoteOrder);
     if (quoteOrder) {
       let _quoteOrder = [];
       let subtotal = 0;
-      Object.entries(quoteOrder).map((i) => {
+      Object.entries(quoteOrder).map((i, index) => {
         const item = i[1];
         const cost = parseInt(item.units) * parseFloat(item.cost);
-        console.log(`${item.units} * ${item.cost} = ${cost}`);
         subtotal += parseFloat(cost);
         _quoteOrder.push({
           name: item.item,

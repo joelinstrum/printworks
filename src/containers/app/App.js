@@ -4,7 +4,6 @@ import Routes from "../../Routes";
 import "./App.scss";
 
 const App = () => {
-  window.localStorage.clear();
   const [userId, setUserId] = useState(
     JSON.parse(localStorage.getItem("userId"))
   );

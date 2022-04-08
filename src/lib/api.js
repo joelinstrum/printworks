@@ -14,7 +14,6 @@ export const useQuery = (endpoint) => {
     };
   } else if (endpoint === "orders") {
     retval = JSON.parse(window.localStorage.getItem("orders")) || [];
-    console.log(retval);
   }
 
   useEffect(() => {
@@ -47,3 +46,15 @@ export const postApi = async (payload) => {
     }, 1000);
   });
 };
+
+// export const updateCost = (payload) => {
+//   const category = payload.category;
+//   const datum = data[category].find( id === payload.id);
+
+//   await new Promise((resolve) => {
+//     /* fake a post */
+//     setTimeout(() => {
+//       resolve();
+//     }, 1000);
+//   });
+// }

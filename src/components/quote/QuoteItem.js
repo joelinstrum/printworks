@@ -2,17 +2,17 @@ import { useContext, useState, useEffect } from "react";
 import { AutofillDropdown } from "../";
 import QuoteContext from "./quote-context";
 
-const QuoteItem = ({ items, category, label }) => {
-  const index = 1;
+const QuoteItem = ({ items, category, label, index }) => {
   const { updateQuoteOrder } = useContext(QuoteContext);
   const [units, setUnits] = useState("");
   const [item, setItem] = useState("");
   const [itemOrderObject, setItemOrderObject] = useState({});
-
   const getCost = (itemName) => items?.find((i) => i.name === itemName)?.cost;
+  const [itemCost, setItemCost] = useState("");
 
   const updateItemOrder = (i, v) => {
     setItem(v);
+    setItemCost(getCost(v));
   };
 
   useEffect(() => {
@@ -21,9 +21,9 @@ const QuoteItem = ({ items, category, label }) => {
       key: `${category}-${index}`,
       item,
       units,
-      cost: getCost(item),
+      cost: itemCost,
     });
-  }, [item, units]);
+  }, [item, units, itemCost]);
 
   useEffect(() => {
     if (itemOrderObject.units && itemOrderObject.item) {
@@ -43,6 +43,19 @@ const QuoteItem = ({ items, category, label }) => {
               items={items}
               name={`${category}-${index}`}
               onSelect={updateItemOrder}
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Cost</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              size="10"
+              value={itemCost}
+              onChange={(e) => setItemCost(e.target.value)}
             />
           </td>
         </tr>

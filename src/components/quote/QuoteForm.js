@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useQuery, postApi } from "../../lib";
 import { Loader } from "../";
 import QuoteItems from "./QuoteItems";
