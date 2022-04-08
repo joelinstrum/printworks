@@ -1,0 +1,46 @@
+@import "../../scss/theme.scss";
+
+.Table {
+  &__form {
+    margin-top: 20px;
+    & td:first-child {
+      text-align: right;
+    }
+  }
+  &__summary {
+    margin-top: 10px;
+    & td {
+      text-align: right;
+      padding: 5px;
+      padding-top: 0px;
+    }
+  }
+}
+
+.Quote {
+  &__summary {
+    &_container {
+      margin-left: 5rem;
+      margin-top: 25px;
+      border: 1px solid $primaryBorderColor;
+      border-radius: 5px;
+      padding: 5px;
+      padding-right: 0;
+      min-width: 20vw;
+      background: $summaryBackground;
+    }
+    &_title {
+      color: $titleLight;
+      font-weight: 700;
+    }
+    &_line {
+      border-top: 1px solid $summaryLineColor;
+      min-height: 1px;
+    }
+  }
+  &__submit {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

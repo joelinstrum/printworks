@@ -1,0 +1,52 @@
+@import "../../scss/theme.scss";
+
+.Autofill {
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    & div:nth-child(2) {
+      cursor: pointer;
+      margin-left: 2px;
+      color: $iconColor;
+      &:hover {
+        color: $iconColorHover;
+      }
+    }
+  }
+  &__clear {
+    color: #a60202;
+    margin-left: -20px;
+    margin-right: 8px;
+    cursor: pointer;
+    min-width: 17px;
+    &:hover {
+      color: #d40202;
+    }
+  }
+  &__input {
+    &_container {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__dropdown {
+    position: absolute;
+    top: 23px;
+    left: 0px;
+    background: $dropdownBackground;
+    border: $dropdownBorder;
+    z-index: 10;
+    padding: 3px;
+    min-width: 172px;
+    & span {
+      display: block;
+      padding: 3px;
+      &:hover {
+        cursor: pointer;
+        background: $dropdownBackgroundHover;
+      }
+    }
+  }
+}

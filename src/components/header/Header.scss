@@ -1,0 +1,32 @@
+@import "../../scss/theme.scss";
+
+.Header {
+  &__container {
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    margin-top: 1rem;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    & div:first-child {
+      font-size: 1.3em;
+      padding-right: 5px;
+      color: $logoColor;
+    }
+    & div:nth-child(2) {
+      color: $primaryColor;
+      font-size: 2em;
+    }
+    & div:nth-child(3) {
+      justify-self: flex-end;
+      margin-left: auto;
+      align-self: flex-end;
+    }
+  }
+  &__loggedIn {
+    justify-self: flex-end;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../scss/theme.scss";
+
+.Menu {
+  &__background {
+    background: $secondaryColor;
+    margin-top: 0.5rem;
+    display: flex;
+    height: 1.75rem;
+    align-items: center;
+  }
+  &__container {
+    display: flex;
+
+    & > div {
+      margin-right: 1rem;
+      cursor: pointer;
+      color: $menuLinkColor;
+      font-weight: 700;
+      &:hover {
+        text-decoration: underline;
+        color: $menuLinkHoverColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@import "../../scss/theme.scss";
+
+.QuoteList {
+  &__table {
+    background: $quoteListBackground;
+  }
+}

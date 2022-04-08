@@ -1,0 +1,54 @@
+@import "../../scss/theme.scss";
+
+.App {
+  &__container {
+    width: 100vw;
+    overflow: auto;
+  }
+  &__interior {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  &__link {
+    color: $linkColor;
+  }
+}
+
+.Page__content {
+  margin-top: 2rem;
+  min-height: 50vh;
+  width: 100%;
+  border: 1px solid $primaryBorderColor;
+  padding: 5px;
+  background: $contentBackground;
+  color: $contentFontColor;
+}
+
+.Page__link {
+  cursor: pointer;
+  color: $pageLinkColor;
+  &:hover {
+    text-decoration: underline;
+    color: $pageLinkColorHover;
+  }
+}
+
+.Flex {
+  &__columns {
+    display: flex;
+  }
+  &__rows {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

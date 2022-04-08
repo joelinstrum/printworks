@@ -1,0 +1,23 @@
+@import "../../scss/theme.scss";
+
+.Loader {
+  &__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    background: $loaderBackgroundColor;
+  }
+  &__interior {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+  }
+  &__spinner {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
